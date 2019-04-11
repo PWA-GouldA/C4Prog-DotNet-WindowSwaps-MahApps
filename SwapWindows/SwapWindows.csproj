@@ -55,6 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SecondWindowCentre.xaml.cs">
+      <DependentUpon>SecondWindowCentre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondWindowDialogMainHidden.xaml.cs">
+      <DependentUpon>SecondWindowDialogMainHidden.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondWindowDialogMainShown.xaml.cs">
+      <DependentUpon>SecondWindowDialogMainShown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondWindowMainClosed.xaml.cs">
+      <DependentUpon>SecondWindowMainClosed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondWindowMainHidden.xaml.cs">
+      <DependentUpon>SecondWindowMainHidden.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +82,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SecondWindowCentre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondWindowDialogMainHidden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondWindowDialogMainShown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondWindowMainClosed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondWindowMainHidden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
