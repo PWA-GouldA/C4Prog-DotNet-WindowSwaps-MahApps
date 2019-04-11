@@ -11,13 +11,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps;
+using MahApps.Metro;
 
 namespace SwapWindows
 {
     /// <summary>
     /// Interaction logic for SecondWindowDialogMainHidden.xaml
     /// </summary>
-    public partial class SecondWindowDialogMainHidden : Window
+    public partial class SecondWindowDialogMainHidden
     {
         public SecondWindowDialogMainHidden()
         {

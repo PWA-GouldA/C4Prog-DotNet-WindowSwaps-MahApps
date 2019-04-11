@@ -11,13 +11,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps;
+using MahApps.Metro;
 
 namespace SwapWindows
 {
     /// <summary>
     /// Interaction logic for SecondWindowCentre.xaml
     /// </summary>
-    public partial class SecondWindowCentre : Window
+    public partial class SecondWindowCentre
     {
         public SecondWindowCentre()
         {

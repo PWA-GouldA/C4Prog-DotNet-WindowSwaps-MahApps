@@ -11,13 +11,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps;
+using MahApps.Metro;
 
 namespace SwapWindows
 {
     /// <summary>
     /// Interaction logic for SecondWindowMainClosed.xaml
     /// </summary>
-    public partial class SecondWindowMainClosed : Window
+    public partial class SecondWindowMainClosed
     {
         public SecondWindowMainClosed()
         {
