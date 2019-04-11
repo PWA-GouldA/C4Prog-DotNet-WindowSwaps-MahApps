@@ -5,48 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SwapWindows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="217.874" Width="236.267">
+        Title="MainWindow" Height="360" Width="360">
     <Grid>
-        <Button x:Name="ButtonSecondCM" Content="Show Second, Close Main" HorizontalAlignment="Left" Margin="38,27,0,0" VerticalAlignment="Top" Width="165" Click="ButtonSecondCM_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                    <GradientStop Color="Black" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="ButtonSecondHM" Content="Show Second, Hide Main" HorizontalAlignment="Left" Margin="38,54,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondHM_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                    <GradientStop Color="#FF000CFF" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="ButtonSecondDB" Content="Dialog Second, Show Main" HorizontalAlignment="Left" Margin="38,81,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDB_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF54006C" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="ButtonSecondDBHM" Content="Dialog Second, Hide Main" HorizontalAlignment="Left" Margin="38,108,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDBHM_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF4DA655" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="ButtonShowCentre" Content="Second Centre" HorizontalAlignment="Left" Margin="38,135,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonShowCentre_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FF4DA655" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="26"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButtonSecondCM" Content="Show Second, Close Main" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="165" Click="ButtonSecondCM_Click" Grid.ColumnSpan="2" Height="22" Background="#FFCCCCCC" Grid.Row="2"/>
+        <Button x:Name="ButtonSecondHM" Content="Show Second, Hide Main" HorizontalAlignment="Left" Margin="0,17,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondHM_Click" Grid.ColumnSpan="2" Height="22" Grid.Column="2" Background="#FF44BBFF" Grid.Row="2"/>
+        <Button x:Name="ButtonSecondDB" Content="Dialog Second, Show Main" HorizontalAlignment="Left" Margin="0,44,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDB_Click" Grid.ColumnSpan="2" Height="22" Grid.Column="2" Background="#FF8855DD" Grid.Row="2"/>
+        <Button x:Name="ButtonSecondDBHM" Content="Dialog Second, Hide Main" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDBHM_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="2" Background="#FF44AA55"/>
+        <Button x:Name="ButtonShowCentre" Content="Second Centre" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonShowCentre_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="3" Background="#FFFFDD66"/>
+        <Rectangle x:Name="GamePlaceHolder" Fill="Black" HorizontalAlignment="Left" Height="74" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" Grid.Row="1"/>
+        <Label Content="Games" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White" Width="74" Grid.Row="1"/>
+        <DockPanel Grid.ColumnSpan="4" Height="22" VerticalAlignment="Top" >
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New" />
+                    <MenuItem Header="_Open" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+                <MenuItem Header="_Window Type">
+                    <MenuItem Header="_Window">
+                        <MenuItem Header="Close Main" />
+                        <MenuItem Header="Hide Main" />
+                    </MenuItem>
+                    <MenuItem Header="_Dialog" >
+                        <MenuItem Header="Close Main" />
+                        <MenuItem Header="Hide Main" />
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Centred" />
+            </Menu>
+        </DockPanel>
+        <Label Content="GRAPH HERE" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Foreground="White" Width="74" Grid.Row="1" FontSize="9" Height="22"/>
 
+        
+        <DockPanel Grid.ColumnSpan="4" Height="24" VerticalAlignment="Bottom" Grid.Row="5">
+            <StatusBar>
+                <StatusBar.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </ItemsPanelTemplate>
+                </StatusBar.ItemsPanel>
+                <StatusBarItem>
+                    <TextBlock>Ready</TextBlock>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="1">
+                    <ProgressBar Value="30" Width="80" Height="18"/>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="2">
+                    <TextBlock>Set</TextBlock>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="3">
+                    <TextBlock>Go!</TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+        </DockPanel>
     </Grid>
 </Window>

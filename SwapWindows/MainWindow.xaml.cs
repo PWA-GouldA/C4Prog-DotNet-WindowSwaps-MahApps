@@ -83,5 +83,10 @@ namespace SwapWindows
             winCent.Show();
 
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonShowCentre_Click(sender, e);
+        }
     }
 }
