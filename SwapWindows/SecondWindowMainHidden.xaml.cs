@@ -11,13 +11,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps;
+using MahApps.Metro;
 
 namespace SwapWindows
 {
     /// <summary>
     /// Interaction logic for SecondWindowMainHidden.xaml
     /// </summary>
-    public partial class SecondWindowMainHidden : Window
+    public partial class SecondWindowMainHidden 
     {
         public SecondWindowMainHidden()
         {
@@ -26,7 +28,7 @@ namespace SwapWindows
 
         private void ButtonReturnHM_Click(object sender, RoutedEventArgs e)
         {
-            // Because Main window (the ownder) is hidden, Show the owner!
+            // Because Main window (the owner) is hidden, Show the owner!
             this.Owner.Show();
             // close this window
             this.Close();
