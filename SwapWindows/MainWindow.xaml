@@ -6,12 +6,10 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:SwapWindows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="360">
+        Title="MainWindow" Height="320" Width="640">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="26"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="26"/>
@@ -20,16 +18,23 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ButtonSecondCM" Content="2nd Window, Close Main" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="156" Click="ButtonSecondCM_Click" Grid.ColumnSpan="2" Height="22" Background="#FFCCCCCC" Grid.Row="2"/>
-        <Button x:Name="ButtonSecondHM" Content="2nd Window, Hide Main" HorizontalAlignment="Left" Margin="11,37,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondHM_Click" Grid.ColumnSpan="2" Height="22" Background="#FF44BBFF" Grid.Row="2"/>
-        <Button x:Name="ButtonSecondDB" Content="2nd Dialog, Show Main" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDB_Click" Grid.ColumnSpan="2" Height="22" Background="#FF8855DD" Grid.Row="3"/>
-        <Button x:Name="ButtonSecondDBHM" Content="2nd Second, Hide Main" HorizontalAlignment="Left" Margin="11,37,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDBHM_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="3" Background="#FF44AA55"/>
-        <Button x:Name="ButtonShowCentre" Content="Second Centre" HorizontalAlignment="Left" Margin="11,37,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.453,2.705" Click="ButtonShowCentre_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="4" Background="#FFDC9600"/>
-        <Rectangle x:Name="GamePlaceHolder" Fill="Black" HorizontalAlignment="Left" Height="74" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" Grid.Row="1"/>
-        <Label Content="Games" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White" Width="74" Grid.Row="1"/>
-        <DockPanel Grid.ColumnSpan="4" Height="22" VerticalAlignment="Top" >
+        <Button x:Name="ButtonSecondCM" HorizontalAlignment="Center" Margin="10,10,123,0" VerticalAlignment="Top" Width="78" Click="ButtonSecondCM_Click" Height="65" Background="#FFCCCCCC" Grid.Row="2">
+            <TextBlock>2nd Window<LineBreak/>Close Main</TextBlock>
+        </Button>
+        <Button x:Name="ButtonSecondHM" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondHM_Click" Height="65" Background="#FF44BBFF" Grid.Row="2">
+            <TextBlock>2nd Window<LineBreak/>Hide Main</TextBlock>
+        </Button>
+        <Button x:Name="ButtonSecondDB" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDB_Click" Height="65" Background="#FF8855DD" Grid.Row="2" Grid.Column="1">
+            <TextBlock>2nd Dialog<LineBreak/>Show Main</TextBlock>
+        </Button>
+        <Button x:Name="ButtonSecondDBHM" HorizontalAlignment="Left" Margin="122,10,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDBHM_Click" Height="65" Grid.Row="2" Background="#FF44AA55" Grid.Column="1">
+            <TextBlock>2nd Second<LineBreak/>Hide Main</TextBlock>
+        </Button>
+        <Button x:Name="ButtonShowCentre" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.453,2.705" Click="ButtonShowCentre_Click" Height="65" Grid.Row="2" Background="#FFDC9600" Grid.Column="2">
+            <TextBlock>Second Window<LineBreak/>Centred on Parent</TextBlock>
+        </Button>
+        <DockPanel Grid.ColumnSpan="4" Height="28 " VerticalAlignment="Top" >
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
                     <MenuItem Header="_New" />
@@ -51,8 +56,6 @@
                 <MenuItem Header="_Centred" />
             </Menu>
         </DockPanel>
-        <Label Content="GRAPH HERE" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Foreground="White" Width="74" Grid.Row="1" FontSize="9" Height="22"/>
-
 
         <DockPanel Grid.ColumnSpan="4" Height="24" VerticalAlignment="Bottom" Grid.Row="5">
             <StatusBar>
@@ -72,18 +75,33 @@
                     </ItemsPanelTemplate>
                 </StatusBar.ItemsPanel>
                 <StatusBarItem>
-                    <TextBlock>Ready</TextBlock>
+                    <TextBlock Foreground="Black">Ready</TextBlock>
                 </StatusBarItem>
                 <StatusBarItem Grid.Column="1">
                     <ProgressBar Value="30" Width="80" Height="18"/>
                 </StatusBarItem>
-                <StatusBarItem Grid.Column="2">
+                <StatusBarItem Grid.Column="2" Foreground="Black">
                     <TextBlock>Set</TextBlock>
                 </StatusBarItem>
-                <StatusBarItem Grid.Column="3">
+                <StatusBarItem Grid.Column="3" Foreground="Black">
                     <TextBlock>Go!</TextBlock>
                 </StatusBarItem>
             </StatusBar>
         </DockPanel>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,7,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Games" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="100" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+            <Label Content="GRAPH HERE" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top" Foreground="White" Width="100" Grid.Row="2" FontSize="9" Height="22" Grid.ColumnSpan="3"/>
+            <Label Content="0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="100" Grid.ColumnSpan="3" Height="63" FontSize="48" MinWidth="100" MinHeight="50" Margin="0,10,0,0" Grid.RowSpan="2"/>
+        </Grid>
     </Grid>
 </Controls:MetroWindow>
