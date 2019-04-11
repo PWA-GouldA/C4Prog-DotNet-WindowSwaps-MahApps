@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SwapWindows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="360" Width="360">
+        Title="MainWindow" Height="400" Width="360">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="26"/>
@@ -21,11 +21,11 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ButtonSecondCM" Content="Show Second, Close Main" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="165" Click="ButtonSecondCM_Click" Grid.ColumnSpan="2" Height="22" Background="#FFCCCCCC" Grid.Row="2"/>
-        <Button x:Name="ButtonSecondHM" Content="Show Second, Hide Main" HorizontalAlignment="Left" Margin="0,17,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondHM_Click" Grid.ColumnSpan="2" Height="22" Grid.Column="2" Background="#FF44BBFF" Grid.Row="2"/>
-        <Button x:Name="ButtonSecondDB" Content="Dialog Second, Show Main" HorizontalAlignment="Left" Margin="0,44,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDB_Click" Grid.ColumnSpan="2" Height="22" Grid.Column="2" Background="#FF8855DD" Grid.Row="2"/>
-        <Button x:Name="ButtonSecondDBHM" Content="Dialog Second, Hide Main" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDBHM_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="2" Background="#FF44AA55"/>
-        <Button x:Name="ButtonShowCentre" Content="Second Centre" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.453,2.705" Click="ButtonShowCentre_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="3" Background="#FFFFDD66"/>
+        <Button x:Name="ButtonSecondCM" Content="2nd Window, Close Main" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="156" Click="ButtonSecondCM_Click" Grid.ColumnSpan="2" Height="22" Background="#FFCCCCCC" Grid.Row="2"/>
+        <Button x:Name="ButtonSecondHM" Content="2nd Window, Hide Main" HorizontalAlignment="Left" Margin="11,37,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondHM_Click" Grid.ColumnSpan="2" Height="22" Background="#FF44BBFF" Grid.Row="2"/>
+        <Button x:Name="ButtonSecondDB" Content="2nd Dialog, Show Main" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDB_Click" Grid.ColumnSpan="2" Height="22" Background="#FF8855DD" Grid.Row="3"/>
+        <Button x:Name="ButtonSecondDBHM" Content="2nd Second, Hide Main" HorizontalAlignment="Left" Margin="11,37,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.453,2.705" Click="ButtonSecondDBHM_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="3" Background="#FF44AA55"/>
+        <Button x:Name="ButtonShowCentre" Content="Second Centre" HorizontalAlignment="Left" Margin="11,37,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.453,2.705" Click="ButtonShowCentre_Click" Grid.ColumnSpan="2" Height="22" Grid.Row="4" Background="#FFDC9600"/>
         <Rectangle x:Name="GamePlaceHolder" Fill="Black" HorizontalAlignment="Left" Height="74" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" Grid.Row="1"/>
         <Label Content="Games" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White" Width="74" Grid.Row="1"/>
         <DockPanel Grid.ColumnSpan="4" Height="22" VerticalAlignment="Top" >
@@ -52,7 +52,7 @@
         </DockPanel>
         <Label Content="GRAPH HERE" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Foreground="White" Width="74" Grid.Row="1" FontSize="9" Height="22"/>
 
-        
+
         <DockPanel Grid.ColumnSpan="4" Height="24" VerticalAlignment="Bottom" Grid.Row="5">
             <StatusBar>
                 <StatusBar.ItemsPanel>

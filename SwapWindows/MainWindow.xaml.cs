@@ -44,6 +44,7 @@ namespace SwapWindows
             SecondWindowMainHidden winHM = new SecondWindowMainHidden();
             winHM.Show();
             winHM.Title = "Main Hidden";
+            
             // Let the second window know it is OWNED by the Main
             winHM.Owner = this;
 
@@ -60,10 +61,9 @@ namespace SwapWindows
             winDB.ShowDialog();
             winDB.Title = "DIALOG BOX, Main Shown";
         }
-
+               
         private void ButtonSecondDBHM_Click(object sender, RoutedEventArgs e)
         {
-
             this.Hide();
 
             // Create instance of window and show it to the user
@@ -72,7 +72,7 @@ namespace SwapWindows
             // Let the second window know it is OWNED by the Main
             winDBHM.Owner = this;
             winDBHM.ShowDialog();
-
+       
         }
 
         private void ButtonShowCentre_Click(object sender, RoutedEventArgs e)

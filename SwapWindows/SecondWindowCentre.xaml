@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SwapWindows"
         mc:Ignorable="d"
-        Title="SecondWindowCentre" Height="163.973" Width="211.918">
+        Title="SecondWindowCentre" Height="163.973" Width="211.918" Background="#FFDC9600">
     <Grid>
         <Button x:Name="ButtonReturn" Content="Return" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="ButtonReturn_Click"/>
 

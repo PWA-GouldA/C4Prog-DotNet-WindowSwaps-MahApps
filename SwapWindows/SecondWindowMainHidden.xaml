@@ -5,14 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SwapWindows"
         mc:Ignorable="d"
-        Title="Second Window Main Hidden" Height="222.14" Width="410.064">
+        Title="Second Window Main Hidden" Height="222.14" Width="410.064" Background="#FF44BBFF">
     <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF000CFF" Offset="0"/>
-                <GradientStop Color="White" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
         <Button x:Name="ButtonReturnHM" Content="Return HM" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="ButtonReturnHM_Click"/>
 
     </Grid>

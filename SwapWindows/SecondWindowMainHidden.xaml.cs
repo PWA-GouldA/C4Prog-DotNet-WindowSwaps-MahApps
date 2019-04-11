@@ -26,7 +26,7 @@ namespace SwapWindows
 
         private void ButtonReturnHM_Click(object sender, RoutedEventArgs e)
         {
-            // Because Main window (the ownder) is hidden, Show the owner!
+            // Because Main window (the owner) is hidden, Show the owner!
             this.Owner.Show();
             // close this window
             this.Close();
